@@ -23,6 +23,7 @@ async function saleTbody(date) {
       now.getFullYear() + "-" + (now.getMonth() + 1) + "-" + now.getDate();
     date = date1;
   }
+
   const ref = doc(db, "result", date);
   const docSnap = await getDoc(ref);
   if (docSnap.exists()) {
@@ -30,7 +31,7 @@ async function saleTbody(date) {
 
     document.getElementById("sale-tbody").innerHTML = `<li class="table-header">
             <div class="col">Time</div>
-            <div class="col">Lucky Number</div>
+            <div class="col">Lucky No.</div>
           </li>`;
 
     let keys = Object.keys(result);
@@ -40,9 +41,9 @@ async function saleTbody(date) {
       <div class="col">` +
         dtime +
         `</div>
-      <div class="col" >` +
+      <div class="col" ><strong>` +
         result[dtime] +
-        `</div>
+        `</strong></div>
     </li>`;
     });
   } else {
