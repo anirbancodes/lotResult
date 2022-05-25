@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MyLotto | MyLot</title>
+    <link rel="stylesheet" href="../style.css" />
+  </head>
+
+  <style>
+    body {
+      font-family: "lato", sans-serif;
+    }
+
+    h2,
+    h3 {
+      font-family: "Poppins", sans-serif;
+    }
+
+    .container {
+      display: flex;
+      margin-left: 10vw;
+      align-items: center;
+      margin-top: 30px;
+    }
+    .sale-table {
+      width: 60vw;
+    }
+    .sale-table li {
+      /* width: 50vw; */
+      border-radius: 3px;
+      padding: 0px 30px;
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 15px;
+    }
+    .sale-table .table-header {
+      background-color: white;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      color: orangered;
+    }
+    .sale-table .table-row {
+      background-color: #fff;
+      box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+    }
+    @media all and (max-width: 767px) {
+      .table-header {
+        display: none;
+      }
+      li {
+        display: block;
+      }
+      .col {
+        flex-basis: 50%;
+      }
+      .col {
+        display: flex;
+        padding: 10px 0;
+      }
+    }
+  </style>
+  <body>
+    <div class="header">
+      <div style="display: flex; justify-content: space-between">
+        <h2>>> MyLot</h2>
+        <h3 class="margin-left-pc" id="time-counter"></h3>
+      </div>
+    </div>
+
+    <div style="padding: 0px 10px">
+      <div style="display: flex; justify-content: space-evenly">
+        <p>Choose Date:</p>
+        <input id="date" type="date" />
+      </div>
+      <br />
+      <div style="display: flex; justify-content: center; margin-top: -15px">
+        <a id="showBtn" class="btn-submit">Show</a>
+      </div>
+
+      <div class="container">
+        <ul class="sale-table" id="sale-tbody"></ul>
+      </div>
+      <div style="height: 50px"></div>
+      <hr style="width: 45vw" />
+    </div>
+
+    <br /><br />
+    <div style="background-color: white">
+      <p
+        style="
+          text-align: center;
+          font-size: 10px;
+          font-family: monospace;
+          text-align: justify;
+          padding: 10px 20px;
+          line-height: 20px;
+        "
+      >
+        © 2022, MyLot - QuickPlay Technologies LLP. All rights reserved. Only
+        mylotto.in & mylot.org are our authorized domains
+      </p>
+    </div>
+    <script type="module" src="/firebase.js"></script>
+  </body>
+</html>
