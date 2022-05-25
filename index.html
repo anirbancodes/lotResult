@@ -82,7 +82,7 @@
         <input id="date" type="date" />
         <a id="showBtn" class="btn-submit">Show</a>
       </div>
-      <br />
+      <p id="today"></p>
 
       <div class="container">
         <ul class="sale-table" id="sale-tbody"></ul>
@@ -97,13 +97,15 @@
           text-align: center;
           font-size: 10px;
           font-family: Poppins;
-
+          color: gray;
           padding: 10px 20px;
           line-height: 12px;
         "
       >
         © 2022, MyLot - QuickPlay Technologies LLP. All rights reserved. Only
-        mylotto.in & mylot.org are our authorized domains
+        <span style="color: orangered">mylotto.in</span> &
+        <span style="color: orangered">mylot.org</span> are our authorized
+        domains
       </p>
     </div>
     <script type="module" src="/firebase.js"></script>

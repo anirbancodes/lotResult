@@ -23,7 +23,7 @@ async function saleTbody(date) {
       now.getFullYear() + "-" + (now.getMonth() + 1) + "-" + now.getDate();
     date = date1;
   }
-
+  document.getElementById("today").innerHTML = date;
   const ref = doc(db, "result", date);
   const docSnap = await getDoc(ref);
   if (docSnap.exists()) {
