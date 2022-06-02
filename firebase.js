@@ -104,7 +104,7 @@ async function saleTbody(date) {
       <div class="col">` +
           dtime +
           `</div>
-      <div class="col" ><strong>` +
+      <div class="col or" ><strong>` +
           result[dtime] +
           `</strong></div>
     </li>`;
