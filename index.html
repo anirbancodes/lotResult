@@ -17,7 +17,9 @@
     h3 {
       font-family: "Poppins", sans-serif;
     }
-
+    #date {
+      font-size: 10px;
+    }
     .container {
       display: flex;
       margin-left: 10vw;
@@ -29,11 +31,14 @@
     }
     .sale-table li {
       /* width: 50vw; */
-      border-radius: 3px;
+      border-radius: 0px;
       padding: 0px 30px;
       display: flex;
       justify-content: space-between;
-      margin-bottom: 15px;
+      margin-bottom: 8px;
+    }
+    .col {
+      font-size: 12px;
     }
     .or {
       color: orangered;
@@ -47,7 +52,8 @@
     }
     .sale-table .table-row {
       background-color: #fff;
-      box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1);
+      /* box-shadow: 0px 0px 9px 0px rgba(0, 0, 0, 0.1); */
+      box-shadow: plum 0px 18px 50px -10px;
     }
     @media all and (max-width: 767px) {
       .table-header {
@@ -61,7 +67,7 @@
       }
       .col {
         display: flex;
-        padding: 10px 0;
+        padding: 5px 0;
       }
     }
   </style>
@@ -81,16 +87,16 @@
           align-items: center;
         "
       >
-        <p>Date:</p>
+        <!-- <p>Date:</p> -->
         <input id="date" type="date" />
-        <a id="showBtn" class="btn-submit">Show</a>
+        <a id="showBtn" class="btn-short fs-12">Show</a>
       </div>
       <p id="today"></p>
 
       <div class="container">
         <ul class="sale-table" id="sale-tbody"></ul>
       </div>
-      <div style="height: 50px"></div>
+      <div style="height: 30px"></div>
     </div>
 
     <br /><br />
@@ -111,6 +117,6 @@
         domains
       </p>
     </div>
-    <script type="module" src="/firebase.js"></script>
+    <script type="module" src="/f.js"></script>
   </body>
 </html>

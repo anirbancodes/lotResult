@@ -18,71 +18,71 @@ import { fetchTime } from "./time.js";
 // }
 
 const dtimes = [
-  "9:0 AM",
-  "9:15 AM",
-  "9:30 AM",
-  "9:45 AM",
-  "10:0 AM",
-  "10:15 AM",
-  "10:30 AM",
-  "10:45 AM",
-  "11:0 AM",
-  "11:15 AM",
-  "11:30 AM",
-  "11:45 AM",
-  "12:0 PM",
-  "12:15 PM",
-  "12:30 PM",
-  "12:45 PM",
-  "1:0 PM",
-  "1:15 PM",
-  "1:30 PM",
-  "1:45 PM",
-  "2:0 PM",
-  "2:15 PM",
-  "2:30 PM",
-  "2:45 PM",
-  "3:0 PM",
-  "3:15 PM",
-  "3:30 PM",
-  "3:45 PM",
-  "4:0 PM",
-  "4:15 PM",
-  "4:30 PM",
-  "4:45 PM",
-  "5:0 PM",
-  "5:15 PM",
-  "5:30 PM",
-  "5:45 PM",
-  "6:0 PM",
-  "6:15 PM",
-  "6:30 PM",
-  "6:45 PM",
-  "7:0 PM",
-  "7:15 PM",
-  "7:30 PM",
-  "7:45 PM",
-  "8:0 PM",
-  "8:15 PM",
-  "8:30 PM",
-  "8:45 PM",
   "9:0 PM",
+  "8:45 PM",
+  "8:30 PM",
+  "8:15 PM",
+  "8:0 PM",
+  "7:45 PM",
+  "7:30 PM",
+  "7:15 PM",
+  "7:0 PM",
+  "6:45 PM",
+  "6:30 PM",
+  "6:15 PM",
+  "6:0 PM",
+  "5:45 PM",
+  "5:30 PM",
+  "5:15 PM",
+  "5:0 PM",
+  "4:45 PM",
+  "4:30 PM",
+  "4:15 PM",
+  "4:0 PM",
+  "3:45 PM",
+  "3:30 PM",
+  "3:15 PM",
+  "3:0 PM",
+  "2:45 PM",
+  "2:30 PM",
+  "2:15 PM",
+  "2:0 PM",
+  "1:45 PM",
+  "1:30 PM",
+  "1:15 PM",
+  "1:0 PM",
+  "12:45 PM",
+  "12:30 PM",
+  "12:15 PM",
+  "12:0 PM",
+  "11:45 AM",
+  "11:30 AM",
+  "11:15 AM",
+  "11:0 AM",
+  "10:45 AM",
+  "10:30 AM",
+  "10:15 AM",
+  "10:0 AM",
+  "9:45 AM",
+  "9:30 AM",
+  "9:15 AM",
+  "9:0 AM",
 ];
 
 async function saleTbody(date) {
-  const apiObj = fetchTime;
-  const apiDate = fetchTime.date,
-    apiTime = fetchTime.time;
+  // const apiObj = fetchTime;
+  const apiDate = fetchTime.date; //,apiTime = fetchTime.time;
   if (!date) {
     let now = new Date();
     let date1 =
       now.getFullYear() + "-" + (now.getMonth() + 1) + "-" + now.getDate();
     date = date1;
+    date = "2022-6-4";
   }
   if (date == apiDate) {
     //today
   }
-  document.getElementById("today").innerHTML = date;
+  // document.getElementById("today").innerHTML = date;
   const ref = doc(db, "result", date);
   const docSnap = await getDoc(ref);
   if (docSnap.exists()) {
