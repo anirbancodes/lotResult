@@ -77,7 +77,6 @@ async function saleTbody(date) {
     let date1 =
       now.getFullYear() + "-" + (now.getMonth() + 1) + "-" + now.getDate();
     date = date1;
-    date = "2022-6-4";
   }
   if (date == apiDate) {
     //today
