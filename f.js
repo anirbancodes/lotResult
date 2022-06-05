@@ -105,20 +105,24 @@ async function saleTbody(date) {
     </li>`;
     });
   } else {
-    alert("No games played");
+    alert("No Permission");
   }
 }
 saleTbody();
 const showBtn = document.getElementById("showBtn");
 showBtn.addEventListener("click", () => {
   let date = document.getElementById("date").value;
-  let i1 = date.indexOf("-"),
-    i2 = date.lastIndexOf("-");
-  date =
-    date.substring(0, i1 + 1) +
-    (Number(date.substring(i1 + 1, i2)) / 10) * 10 +
-    "-" +
-    (Number(date.substring(i2 + 1, i2 + 3)) / 10) * 10;
-  console.log(date);
+  if (date) {
+    let i1 = date.indexOf("-"),
+      i2 = date.lastIndexOf("-");
+    date =
+      date.substring(0, i1 + 1) +
+      (Number(date.substring(i1 + 1, i2)) / 10) * 10 +
+      "-" +
+      (Number(date.substring(i2 + 1, i2 + 3)) / 10) * 10;
+  } else if (!date) {
+    let now = new Date();
+    date = now.getFullYear() + "-" + (now.getMonth() + 1) + "-" + now.getDate();
+  }
   saleTbody(date);
 });
