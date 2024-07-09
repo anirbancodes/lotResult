@@ -18,7 +18,7 @@ let date, time, hms;
 
 async function fetchTime() {
   let apiData;
-  await fetch("https://time.api.mylot.org")
+  await fetch("https://time.api.anirbandeb.cloud")
     .then((res) => res.json())
     .then((res) => {
       apiData = res;
@@ -26,7 +26,7 @@ async function fetchTime() {
       // date = res.date;
     })
     .catch(async (err) => {
-      await fetch("https://time.api.mylotto.in")
+      await fetch("https://time.api.anirbandeb.cloud")
         .then((res) => res.json())
         .then((res) => {
           apiData = res;
